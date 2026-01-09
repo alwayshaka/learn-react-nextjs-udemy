@@ -1,11 +1,14 @@
 import clasess from './Post.module.css'
+import { Link } from 'react-router'
 
-function Post({ author, body }) {
+function Post({ id, author, body }) {
 
     return (
         <div className={clasess.post}>
-            <p className={clasess.author}>{author}</p>
-            <p className={clasess.text}>{body}</p>
+            <Link to={id}>
+                <p className={clasess.author}>{author}</p>
+                <p className={clasess.text}>{body}</p>
+            </Link>
         </div>
     )
 }
